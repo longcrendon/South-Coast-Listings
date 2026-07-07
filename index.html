@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>South Coast KZN Quick Reference</title>
+<style>
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; background:#f0f0f0; font-family:Helvetica,Arial,sans-serif; min-width:1260px; }
+    .page-wrapper { width:1260px; margin:0 auto; position:relative; background:white; min-height:1580px; }
+
+    /* ==================== HEADER (your latest) ==================== */
+    .header { 
+        height: 150px; 
+        position:relative; 
+        background:white; 
+        width:972px; 
+        margin:0 auto; 
+        padding:10px 0 12px 0; 
+        z-index:40;
+    }
+	
+	.social { position:absolute; left:1px; top:1px; width:970px; height:13px; background:#e0e0e0; font-size:9px; line-height:13px; text-align:center; }
+    .edition { position:absolute; left:1px; top:21px; width:85px; height:62px; border:5px solid #88ccff; text-align:center; padding-top:15px; font:9px "Trebuchet MS",Helvetica; line-height:1.2; }
+    .pagebox { position:absolute; left:1px; top:94px; width:51px; height:43px; border:5px solid #d00000; text-align:center; padding-top:7px; font:9px "Trebuchet MS",Helvetica; line-height:1.4; color:#d00; cursor:pointer; }
+    .topbanner { position:absolute; left:97px; top:17px; width:700px; height:67px; background:linear-gradient(to right, #006400, #004d00); color:white; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:13px; border:2px solid #ffd700; }
+    .brand { position:absolute; left:64px; top:82px; width:732px; height:45px; border:2px solid #006400; background:white; text-align:center; line-height:50px; font-size:18px; z-index:2; }
+    .motivational { position:absolute; left:0; top:157px; width:972px; height:17px; background:white; text-align:center; line-height:15px; font-style:italic; font-size:11px; color:#006400; }
+
+    .lfs { position:absolute; left:823px; top:23px; width:150px; height:118px; z-index:30; }
+    .btns { position:absolute; right:6px; top:8px; display:flex; gap:8px; z-index:40; }
+    .btn { background:#006400; color:white; border:none; padding:6px 14px; font:bold 12px Helvetica; border-radius:4px; cursor:pointer; }
+
+    .logo-space { position:absolute; width:80px; height:70px; background:white; border:4px solid #006400; border-radius:5px; overflow:hidden; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.2); top:45px; right:5px; }
+    .alpha-display { position:absolute; right:93px; top:47px; font:22px "Franklin Gothic Medium",Helvetica; color:#006400; border:2px solid #006400; background:white; width:50px; height:32px; text-align:center; line-height:26px; z-index:25; }
+    .level { position:absolute; right:94px; top:80px; font:9px Helvetica; color:#006400; font-weight:bold; background:white; width:46px; height:20px; text-align:center; line-height:20px; z-index:25; }
+	.membership-info {
+    position:absolute; 
+    right:89px; 
+    top:95px; 
+    font:7.2px Helvetica,Arial,sans-serif; 
+    line-height:1.15; 
+    text-align:right; 
+    color:#444; 
+    width:160px;
+    z-index:25;
+	}
+    .license { position:absolute; font:7.5px Helvetica,Arial,sans-serif; text-align:right; line-height:8px; top:125px; right:3px; width:160px; height:32px; overflow:hidden; color:#444; z-index:35; }
+
+    /* ==================== FRAMES & LISTINGS (your latest) ==================== */
+    .green-frame { position:absolute; left:156px; top:188px; width:790px; height:1055px; border:5px solid #006400; background:white; z-index:1; }
+    .black-frame { position:absolute; left:159px; top:193px; width:785px; height:1045px; border:4px solid #000; z-index:2; }
+
+    .listings-area { 
+        position:absolute; left:164px; top:198px; width:755px; height:960px; 
+        padding:6px 12px 75px 12px; background:white; z-index:10; overflow:hidden; 
+    }
+
+    /* Listings styling (unchanged except tighter grid) */
+    .listing { 
+        display:grid; grid-template-columns:90px 112px 272px 236px; 
+        gap:2px 6px; min-height:31px; padding:2px 5px; border-bottom:1px solid #ddd; align-items:center;
+    }
+    .maincat { font:bold 11px Helvetica,Arial,sans-serif; color:red; background:#f0f0f0; padding:3px 10px; margin:4px 0 3px 5px; width:99%; position:relative; }
+    .maincat.split::after { content:"continued..."; font: bold 9px Helvetica; color:red; position:absolute; right:6px; top:4px; display:block; }
+
+		/* Restore subcat & loc styling */
+.subcat { 
+    font:9.5px Arial; 
+    color:#34C0FF; 
+}
+.loc { 
+    font: 9.5px Helvetica, Arial, sans-serif; 
+    line-height: 1.1; 
+    color:#333; 
+}
+
+        .company-block { display:flex; flex-direction:column; justify-content:center; text-align:right; padding-right:6px; min-width:270px; }
+        .company { font: bold 12px Helvetica; line-height: 1.12; margin-bottom: 1px;}
+        .slogan { font: 9px Helvetica; color: #444; line-height: 1.05; }
+
+ /* Contact block - fill LEFT column first */
+.contact-block { 
+    display:flex; 
+    gap:4px; 
+    justify-content:flex-start;   /* changed from flex-end */
+    align-items:center; 
+    flex-wrap:nowrap; 
+    min-width:245px; 
+    padding-right:4px; 
+}
+.contact-pair { 
+    min-width: 112px; 
+    text-align:center; 
+}
+
+        .instr { font:9px Helvetica,Arial,sans-serif; color:#3498db; margin-bottom:1px; white-space:nowrap; display:block; }
+		.numbers {
+    font: bold 14.5px Helvetica; 
+    line-height: 1; 
+    display:flex;  
+    justify-content:center; 
+    gap:4px;
+    margin-left: 1px;   /* ← Adjust this value as needed */
+	}
+		.wa-icon { color:#25D366; font-size:15px; }
+
+		/* Bottom Banner */
+    .bottom-banner { position:absolute; bottom:400px; left:175px; width:755px; height:28px; background:#006400; color:white; display:flex; align-items:center; justify-content:space-between; padding:0 12px; font-size:11px; z-index:50; }
+    .footer-copyright { position:absolute; bottom:375px; left:175px; width:755px; height:22px; background:#006400; color:white; font-size:10px; line-height:22px; text-align:center; z-index:50; }
+
+    .adcol { position:absolute; right:144px; top:188px; width:162px; height:1180px; z-index:15; }
+    .ad { width:160px; height:340px; margin-bottom:12px; border:3px solid #006400; overflow:hidden; background:#f0f0f0; }
+
+        /* Modals */
+        .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; align-items:center; justify-content:center; }
+        .modal-content { background:white; padding:25px; border-radius:8px; width:420px; max-height:90vh; overflow:auto; }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- YOUR HEADER HTML (as provided) -->
+        <div class="header">
+            <!-- [Paste your full header HTML here - the one you sent last] -->
+			        <div class="header">
+            <div class="social" style="position:absolute; left:0; top:5px; width:970px; height:13px; background:#e0e0e0; font-size:9px; line-height:13px; padding:0 8px; box-sizing:border-box;">
+                Facebook | Instagram | WhatsApp Channel – 
+                <a href="https://chat.whatsapp.com/CWHjVWf84tnKjGlrxPunMn" target="_blank" style="color:#006400; text-decoration:none;">WhatsApp</a> | 
+                <a href="https://facebook.com/share/q/19WEXzq1mL" target="_blank" style="color:#006400; text-decoration:none;">Facebook</a>
+            </div>
+              <div class="edition"><span id="editionDate"></span></div>
+            <div class="pagebox" id="pagebox" style="cursor:pointer;" onclick="showGoToPopup()">PAGE<br>1 of 1</div>
+            <div class="topbanner" style="height:67px; background: linear-gradient(to right, #006400, #004d00); color:white; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:13px; border:2px solid #ffd700; margin:4px 0;">
+                🌟 EXCLUSIVE PREMIUM SPONSORSHIP OPPORTUNITY 🌟 • Prime per-page visibility • Limited availability
+            </div>
+            <div class="brand" style="position: relative; padding: 12px 0px 0px 0px; text-align: center; line-height: 1.1;">
+                South Coast, KZN <b>~ Quick Reference© ~ </b>Business & Community Directory
+                <div style="position: absolute; left: 0; right: 0; bottom: 4px; font-size: 8px; color: #444; line-height: 1; z-index: 25; pointer-events: none;">
+                     Information subject to change. All listings provided in good faith.
+                </div>
+            </div>
+			<div class="motivational" id="motivationalReel"><span id="motivationalText"></span></div>
+<div class="lfs">
+    <div style="position:absolute; right:1px; top:4px; display:flex; gap:8px; z-index:35;">
+        <div class="btns">
+            <button onclick="showRegisterModal()" class="btn">Register</button>
+            <button onclick="showSearchModal()" class="btn">Search</button>
+        </div>
+        
+        <div class="logo-space">
+            <img src="https://i.ibb.co/4wJFrNZY/PBRPA-Logo-with-slogan-small.jpg" alt="PBRPA Logo">
+        </div>
+
+		<div class="alpha-display" id="alphaDisplay" style="top:47px;">A</div>
+        <div class="level" id="levelDisplay" style="top:80px;"></div>
+
+		<!-- New Membership Info -->
+		<div class="membership-info">
+		<strong>Member Ref:</strong> <span id="memberRef">SCM-00001</span><br>
+		<strong>Total Members:</strong> <span id="totalMembers">248</span>
+		</div>
+
+        <div class="license">
+            License No: L12345<br>
+            palmbeachratepayersassociation@gmail.com
+        </div>
+    </div>
+</div>
+        </div>
+        </div>
+
+        <div class="green-frame"></div>
+        <div class="black-frame"></div>
+
+        <div class="listings-area">
+            <div id="listingsMaster">
+                <!-- Your full listings go here -->
+<div class="maincat">Antique shops</div>
+    <div class="listing">
+      <div class="subcat"></div>
+      <div class="loc">South Coast, KZN<br></div>
+      <div class="company-block"><span class="company">Antiques on Bulwer</span><span class="slogan">Dealer of antiques & precious collectibles</span></div>
+      <div class="contact-block">
+	  <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">083 655 4302</div></div>
+		<div class="contact-pair"><div class="instr" style="color:#3498db;"></div><div class="numbers"></div><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+     </div>
+	 </div>
+
+    <div class="maincat">Arts & Crafts</div>
+    <div class="listing">
+      <div class="subcat">Activities</div>
+      <div class="loc">Scottburgh<br></div>
+      <div class="company-block"><span class="company">Nkani Playgroup</span><span class="slogan"></span></div>
+      <div class="contact-block">
+	  <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">082 345 6440</div></div>
+      <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div>
+	  </div>
+
+    <div class="listing">
+      <div class="subcat"></div>
+      <div class="loc">Amanzimtoti<br></div>
+      <div class="company-block"><span class="company">Sakura Art Studio</span><span class="slogan"></span></div>
+      <div class="contact-block">
+        <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">068 235 3993</div></div>
+        <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">069 669 6940</div></div>
+      </div>
+	   </div>
+
+    <div class="listing">
+      <div class="subcat">Artists</div>
+      <div class="loc">Palm Beach<br></div>
+      <div class="company-block">
+        <span class="company">Crazy Creations 7401</span><span class="slogan">painter & pyrographer</span></div>
+      <div class="contact-block">
+        <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">074 694 4954</div></div>
+        <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div>
+	   </div>
+
+    <div class="listing">
+      <div class="subcat">Crafts</div>
+      <div class="loc">Hibberdene<br></div>
+      <div class="company-block"><span class="company">Khalula Designs</span><span class="slogan">Laser engraving & cutting, Vinyl stickers & printing</span></div>
+      <div class="contact-block">
+        <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">068 267 4994</div></div>
+        <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div>
+	   </div>
+
+    <div class="listing">
+      <div class="subcat"></div>
+      <div class="loc">Marina Beach<br></div>
+      <div class="company-block"><span class="company">Fons et Origo Gifts</span><span class="slogan"></span></div>
+      <div class="contact-block">
+        <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">063 514 7284</div></div>
+        <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div>
+	   </div>
+
+    <div class="listing">
+      <div class="subcat">Shops</div>
+      <div class="loc">Ramsgate<br></div>
+      <div class="company-block"><span class="company">Coastal Crafts in Ramsgate</span><span class="slogan"></span></div>
+      <div class="contact-block">
+        <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">071 922 6836</div></div>
+        <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div>
+	   </div>
+
+    <div class="listing">
+      <div class="subcat"></div>
+      <div class="loc">Scottburgh<br></div>
+      <div class="company-block"><span class="company">Crafts and Creations by Colette</span><span class="slogan"></span></div>
+      <div class="contact-block">
+	  <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">066 251 5464</div></div>
+      <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div>
+	   </div>
+  
+    <div class="maincat">Auctioneers</div>
+    <div class="listing">
+      <div class="subcat"></div>
+      <div class="loc">Marina Beach<br></div>
+      <div class="company-block"><span class="company">Johny's Auction</span><span class="slogan"></span></div>
+      <div class="contact-block">
+      <div class="contact-pair"><div class="instr" style="color:#3498db;">OFFICE</div><div class="numbers">074 202 7214</div></div>
+      <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div>
+	   </div>
+
+
+    <div class="maincat">Automotive</div>
+    <div class="listing">
+      <div class="subcat">Car Wash</div>
+      <div class="loc">Shelly Beach<br></div>
+      <div class="company-block"><span class="company">Clean & Shine Car Wash</span><span class="slogan"></span></div>
+      <div class="contact-block">
+      <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">083 743 2200</div></div>
+      <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div>
+	   </div>
+
+    <div class="listing">
+      <div class="subcat"></div>
+      <div class="loc">South Coast, KZN<br></div>
+      <div class="company-block"><span class="company">Wash 7 Glow Mobile Cleaning</span><span class="slogan"></span></div>
+      <div class="contact-block">
+      <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">083 743 2200</div></div>
+      <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div> 
+	  </div>
+
+    <div class="listing">
+      <div class="subcat">Driver's License</div>
+      <div class="loc">South Coast, KZN<br></div>
+      <div class="company-block"><span class="company">Quick & Easier Driver's License</span><span class="slogan"></span></div>
+      <div class="contact-block">
+	  <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">073 264 4223</div></div>
+      <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers">888 888 8888</div></div>
+      </div>
+	   </div>
+  
+    <div class="listing">
+      <div class="subcat">Panelbeaters</div>
+      <div class="loc">Amanzimtoti<br></div>
+      <div class="company-block"><span class="company">Auto Rust Control Panelbeaters, ARC</span><span class="slogan"></span></div>
+      <div class="contact-block">
+	  <div class="contact-pair"><div class="instr" style="color:#3498db;">OFFICE</div><div class="numbers">031 916 2996</div></div>
+      <div class="contact-pair"><div class="instr" style="color:red;">EMERGENCY</div><div class="numbers">072 902 2620</div></div>
+      </div>
+	   </div>
+
+    <div class="maincat">Baking & Confectionery</div>
+    <div class="listing">
+      <div class="subcat"></div>
+      <div class="loc">South Coast, KZN<br></div>
+      <div class="company-block"><span class="company">Dit en Dat Boetiek</span><span class="slogan"></span></div>
+      <div class="contact-block">
+      <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">064 523 1500</div></div>
+      <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div>
+	   </div>
+
+    <div class="listing">
+      <div class="subcat"></div>
+      <div class="loc">Munster<br></div>
+      <div class="company-block"><span class="company">dIRECT SALES</span><span class="slogan">branded cookies & salty biscuits</span></div>
+      <div class="contact-block">
+      <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">083 356 0122</div></div>
+      <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+	  </div>
+	  </div>
+
+    <div class="listing">
+      <div class="subcat"></div>
+      <div class="loc">Port Edward<br></div>
+      <div class="company-block"><span class="company">Spices n Sweets</span><span class="slogan">Stockists of spices, savoury snacks and sweets</span></div>
+      <div class="contact-block">
+      <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">061 966 2251</div></div>
+      <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+      </div>
+	  </div>
+
+    <div class="listing">
+    <div class="subcat">Bakeries</div>
+    <div class="loc">Uvongo<br></div>
+    <div class="company-block"><span class="company">Royal Bakery</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">039 317 3168</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div> 
+	</div>
+
+    <div class="maincat">Boilermaker & Steelworks</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Marina Beach<br></div>
+    <div class="company-block"><span class="company">Intent Projects</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">074 202 7214</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+	  
+    <div class="maincat">Borehole drilling</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">Water Bender SA</span><span class="slogan">Boreholes, Water Treatment & Filtration</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">063 786 3986</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+	
+    <div class="maincat">Bottle Stores</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Shepstone<br></div>
+    <div class="company-block"><span class="company">Marine Liquor Store</span><span class="slogan">Opp. new Port Shepstone Mall</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">082 356 6000</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Butcheries</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">Funky Meats</span><span class="slogan">Online and delivered</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">071 303 2479</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#3498db;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Cafés</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Marina Beach<br></div>
+    <div class="company-block"><span class="company">IRiE Café</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">081 336 1022</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Delicatessens</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Southbroom<br></div>
+    <div class="company-block">
+    <span class="company">De Lish</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">060 869 4121</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">072 773 3277</div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Uvongo<br></div>
+    <div class="company-block"><span class="company">Royal Bakery</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">039 317 3168</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Entertainment</div>
+    <div class="listing">
+    <div class="subcat">Musicians</div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">DJ Blaz3</span><span class="slogan">Musician, magician</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">067 892 2292</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat">Entertainers</div>
+    <div class="loc">South Coast,KZN<br></div>
+    <div class="company-block"><span class="company">Pieta Venter</span><span class="slogan">Entertainer</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div <class="numbers" style="color:#3498db;">MANAGER</div><div>061 071 2026</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat">Events Management</div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">Audio Trix Productions</span><span class="slogan">Events Technical Services Company</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">078 329 0261</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Estate Agents</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Amanzimtoti<br></div>
+    <div class="company-block"><span class="company">Harcourts Toti</span><span class="slogan"></span></div>
+    <div class="contact-block">
+	<div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">072 833 3399</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Banners Rest<br>Port Edward</div>
+    <div class="company-block"><span class="company">Tracko Property Rentals</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">076 045 8193</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Lower<br>South Coast  </div>
+    <div class="company-block"><span class="company">I Property Investment</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">079 184 4291</div></div>
+	<div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Edward<br>2 Trafalgar   </div>
+    <div class="company-block"><span class="company">Shoreline Properties</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">082 574 2054</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Filtration</div>
+    <div class="listing">
+    <div class="subcat">Ind. Pollution Control</div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">Industrial Pollution Control</span><span class="slogan">Critical filtration processes</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">074 777 0703</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Fitness Training</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Sea Park<br></div>
+    <div class="company-block"><span class="company">Pilates with Laura May</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">082 443 4533</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Florists</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc"><br>Margate</div>
+    <div class="company-block"><span class="company">South Coast Florist & Décor</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">081 336 1022</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Food</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc"><br>Butcheries</div>
+    <div class="company-block"><span class="company">Lee's Venison - Wildly Healthy, Wildly Affordable</span><span class="slogan">Collect:  Ramsgate, Shelly Beach, Manaba, Uvongo</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">082 466 5029</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Gardening</div>
+    <div class="listing">
+    <div class="subcat">Accessories</div>
+    <div class="loc"><br>Munster</div>
+    <div class="company-block"><span class="company">Direct SALES</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;"></div><div class="numbers"></div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">083 356 0122</div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat">Equipment</div>
+    <div class="loc"><br>Palm Beach</div>
+    <div class="company-block"><span class="company">Lawnmower Place</span><span class="slogan"></span></div>
+    <div class="contact-block"><div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">039 315 0177</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat">Fencing</div>
+    <div class="loc"><br>South Coast, KZN</div>
+    <div class="company-block"><span class="company">Budget Fencing</span><span class="slogan">supply and installation</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">081 250 5652</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Florists</div>
+    <div class="listing">
+    <div class="subcat">Garden Services</div>
+    <div class="loc">Pennington<br>to Umkomaas</div>
+    <div class="company-block"><span class="company">de Graaf Garden & Home Maintenance</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">064 547 6724</div></div>
+	<div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Hairdressing</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Hibberdene<br></div>
+    <div class="company-block"><span class="company">Inspired Beauty & Hair</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RONEL</div><div class="numbers">083 957 5180</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">DANY</div><div class="numbers">064 150 5515</div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Health</div>
+    <div class="listing">
+    <div class="subcat">Aerobic & Movement Classes</div>
+    <div class="loc">Munster<br>PB & PE</div>
+    <div class="company-block"><span class="company">Phoenix School of Dance</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">078 866 3897</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat">Aromatherapy</div>
+    <div class="loc">Amanzimtoti<br></div>
+    <div class="company-block"><span class="company">Amber Oil Co.</span><span class="slogan">Frangrance oil for burners & diffusers</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">082 715 3846</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat">Beauty & Spa</div>
+    <div class="loc">Hibberdene<br></div>
+    <div class="company-block"><span class="company">Inspired Beauty Salon</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">083 957 5180</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Edward<br></div>
+    <div class="company-block"><span class="company">Indulgence Aesthetic Spa, PMU & Hair</span><span class="slogan">just one booking away to unwind</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">072 592 8921</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Investigative Services</div>
+    <div class="listing">
+    <div class="subcat">Private</div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">SA Collective Investigation & Mediation Service</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">074 202 7214</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">074 800 0396</div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Investments</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Palm Beach<br></div>
+    <div class="company-block"><span class="company">Future Forex</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">071 294 1810</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Internet Café</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Edward<br></div>
+    <div class="company-block"><span class="company">De'o Volen'te Internet Café</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">039 311 1141</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Medical</div>
+    <div class="listing">
+    <div class="subcat">General Practitioners</div>
+    <div class="loc">Port Edward<br></div>
+    <div class="company-block"><span class="company">MD24</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RECEPTION</div><div class="numbers">076 091 0130</div></div>
+    <div class="contact-pair"><div class="instr" style="color:red;">EMERGENCY</div><div class="numbers">074 583 8585</div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Shepstone<br></div>
+    <div class="company-block"><span class="company">MD24</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RECEPTION</div><div class="numbers">076 091 0130</div></div>
+    <div class="contact-pair"><div class="instr" style="color:red;">EMERGENCY</div><div class="numbers">074 583 8585</div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Sea Park<br></div>
+    <div class="company-block"><span class="company">Dr. Roeloffs Practice</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RECEPTION</div><div class="numbers">066 321 5017</div></div>
+	<div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Shelly Beach<br></div>
+	<div class="company-block"><span class="company">MD24</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RECEPTION</div><div class="numbers">076 091 0130</div></div>
+    <div class="contact-pair"><div class="instr" style="color:red;">EMERGENCY</div><div class="numbers">074 583 8585</div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Umtentweni<br></div>
+    <div class="company-block"><span class="company">Dr. Roeloffs Practice</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RECEPTION</div><div class="numbers">083 209 0577</div></div>
+    <div class="contact-pair"><div class="instr" style="color:red;">EMERGENCY</div><div class="numbers">072 983 3048</div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Metal Sharpening</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Hibberdene<br>2 Port Edward</div>
+    <div class="company-block"><span class="company">Edge Master, Blades, Knives, Tools ...</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">084 549 6587</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">068 533 1100</div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Modelling</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Pennington<br></div>
+    <div class="company-block"><span class="company">South Coast Models</span><span class="slogan">& Event Entertainment PTY Ltd.</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">084 489 8359</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Occupational Health & Safety</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">Beehive OH & S</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">OFFICE</div><div class="numbers">072 594 5989</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">079 491 4646</div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Printing</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Shelly Beach<br></div>
+    <div class="company-block"><span class="company">Ignite Printing</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RECEPTION</div><div class="numbers">069 616 2185</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat">Printers</div>
+    <div class="loc">Margarte<br></div>
+    <div class="company-block"><span class="company">INK Man - all services, printer related</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">039 312 1333</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">074 163 2577</div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Property</div>
+    <div class="listing">
+    <div class="subcat">Maintenance</div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">JM Property Maintenance Services</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">063 634 6001</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat">Rentals</div>
+    <div class="loc">Banners Rest,<br>Port Edward</div>
+    <div class="company-block"><span class="company">Tracko Property Rentals</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">OFFICE</div><div class="numbers">076 045 8193</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Recruitment</div>
+    <div class="listing">
+    <div class="subcat">Agencies</div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">Aunty PEE Placement Agency, Hire & Relax</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">073 221 6278</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">Pakanyo HR Solutions</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">076 600 8585</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">MegMarTen Virtual Recruitment Services</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">071 798 3818</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat">Agricultural</div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">MIDWEST Placements</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RECEPTION</div><div class="numbers">072 088 4844</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Refrigeration</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc"><br>Margate</div>
+    <div class="company-block"><span class="company">Willie's Refrigeration & Airconditioning</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">078 602 8565</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Restaurants</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Hibberdene<br></div>
+    <div class="company-block"><span class="company">Mzimayi River Restaurant</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RECEPTION</div><div class="numbers">039 699 3077</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Edward<br></div>
+    <div class="company-block"><span class="company">The Cow Shed Coffee Shop</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RECEPTION</div><div class="numbers">076 461 7069</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;">WHATSAPP</div><div class="numbers">067 252 3325</div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Shepstone<br></div>
+    <div class="company-block"><span class="company">Die Local</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">RECEPTION</div><div class="numbers">073 748 9035</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Rigging</div>
+    <div class="listing">
+    <div class="subcat">Boreholes</div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">MG Rigging</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">061 768 7402</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Satelite</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Hibberdene<br>2 Port Edward</div>
+    <div class="company-block"><span class="company">Marine Communication</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">082 816 0628</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Second Hand Shops</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Amanzimtoti<br></div>
+    <div class="company-block"><span class="company">Mrs. Green's Thrifting</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">081 594 3161</div></div>
+	<div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Edward<br>Arbor Glade</div>
+    <div class="company-block"><span class="company">The Venue, Buy$ell Charity Shop</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">OFFICE</div><div class="numbers">064 906 6931</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Security</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Trafalgar<br>2 Port Edward</div>
+    <div class="company-block"><span class="company">GP Security</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">039 311 1117</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Signage</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">Zebu Creations Signage & Laser</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">071 474 3340</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Solar Energy</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">NSC Power Solutions</span><span class="slogan">Keeping your lights on</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">082 499 5226</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Transportation</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Edward<br>2 Hibberdene</div>
+    <div class="company-block"><span class="company">Fabulous Deliveries</span><span class="slogan">Scrap, garden refuse, black bags, furniture removal</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">074 870 5014</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Park Rynie <br>2 Scottburgh</div>
+    <div class="company-block"><span class="company">Moliah's Transport Services</span><span class="slogan">Port Shepstone to King Shaka Airport</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">073 105 6899</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Waste Management</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">Jims Bins & Mini Skips</span><span class="slogan">Garden refuse, building rubble, Sand, Stone and Scrap</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">082 888 2665</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">Afri-Projects</span><span class="slogan">Skip Hire</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">066 202 4943</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Water Supply</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Edward<br>2 Southbroom</div>
+    <div class="company-block"><span class="company">Easy Ice</span><span class="slogan">Urgent Ice in Transit</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">066 419 3426</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Port Edward<br>2 Hibberdene</div>
+    <div class="company-block"><span class="company">Fler Water (Pty) Ltd</span><span class="slogan">Bulk Water Delivery</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">065 822 5015</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">COMMUNITY LISTINGS</div>
+
+    <div class="maincat">Animal Shelters</div>
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Margate<br></div>
+    <div class="company-block"><span class="company">Ricky's New Hope Rescue</span><span class="slogan">NPC2023/155633/8</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">074 696 9816</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+  
+    <div class="maincat">Charities</div>
+    <div class="listing">
+    <div class="subcat">Organistations</div>
+    <div class="loc">South Coast, KZN<br></div>
+    <div class="company-block"><span class="company">ZIPHAKAMISE</span><span class="slogan">Lift yourself up</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">CALL</div><div class="numbers">083 209 0577</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="maincat">Shops</div>
+    <div class="listing">
+    <div class="subcat">Churches</div>
+    <div class="loc">Palm Beach<br></div>
+    <div class="company-block"><span class="company">Eden Worship Centre</span><span class="slogan">Pentecostal Protestant Church</span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">Pastor Belinda</div><div class="numbers">083 459 1751</div></div>
+	<div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Sea Park<br></div>
+    <div class="company-block"><span class="company">Elohim Rophe Ministries</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">Office</div><div class="numbers">065 813 0259</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat">Conservancies</div>
+    <div class="loc">Leisure Bay<br></div>
+    <div class="company-block"><span class="company">Leisure Bay Conservancy</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">Call</div><div class="numbers">083 954 4743</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+
+    <div class="listing">
+    <div class="subcat"></div>
+    <div class="loc">Leisure Bay<br></div>
+    <div class="company-block"><span class="company">Leisure Bay Conservancy</span><span class="slogan"></span></div>
+    <div class="contact-block">
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">Call</div><div class="numbers">083 954 4743</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+    </div>
+	</div>
+            </div>
+        </div>
+
+		<div class="adcol" style="position:absolute; right:144px; top:188px; width:162px; height:1180px; z-index:15; background:transparent;">
+
+    <!-- Page 1 Ads -->
+    <div class="ad page-ad" data-page="1">
+        <img src="https://i.ibb.co/9HKcDyhB/image-1.jpg" alt="Mother & Child Baking" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div class="ad" id="grok-ad">
+        <img src="https://i.ibb.co/placeholder-grok-ad" alt="Powered by Grok xAI" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div class="ad page-ad" data-page="1">
+        <img src="https://i.ibb.co/G47gYTwn/image-3.jpg" alt="Grandmother Hug" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+
+    <!-- Page 2 Ads -->
+    <div class="ad page-ad" data-page="2" style="display:none;">
+        <img src="https://i.ibb.co/FL2ScHkL/image-4.jpg" alt="Mother Cooking" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div class="ad page-ad" data-page="2" style="display:none;">
+        <img src="https://i.ibb.co/5XfhMFDg/image-5.jpg" alt="Mother Gardening" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div class="ad page-ad" data-page="2" style="display:none;">
+        <img src="https://i.ibb.co/Pzc4nN4f/image-6.jpg" alt="Mother & Child in Garden" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+
+    <!-- Page 3+ (repeat or add more as needed) -->
+    <div class="ad page-ad" data-page="3" style="display:none;">
+        <img src="https://i.ibb.co/9HKcDyhB/image-1.jpg" alt="Mother & Child Baking" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+</div>
+            
+
+        <div class="bottom-banner">
+            <button onclick="prevPage()">PREV</button>
+            <span>SPONSORSHIP OPPORTUNITY FOR NATIONAL AND LOCAL COMPANIES</span>
+            <button onclick="nextPage()">NEXT</button>
+        </div>
+
+        <div class="footer-copyright">
+            © 2025 Quick Reference Directory – All rights reserved - Crendon Marketing - QRv1.0
+        </div>
+    </div>
+
+ <!-- Register Modal -->
+<div id="registerModal" class="modal">
+    <div class="modal-content" style="width:520px; max-height:90vh; overflow:auto;">
+        <span onclick="closeRegisterModal()" style="float:right; font-size:28px; cursor:pointer;">×</span>
+        <h2>Register Your Business - Step <span id="stepNumber">1</span>/6</h2>
+
+        <!-- Step 1 -->
+        <div id="registerStep1">
+            <label>Name of Applicant:</label>
+            <input type="text" id="regName" style="width:100%; padding:8px; margin:8px 0 15px 0;" required>
+            <button onclick="nextRegisterStep(1)" style="background:#006400; color:white; padding:12px; width:100%; border:none; border-radius:4px;">Next</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div id="registerStep2" style="display:none;">
+            <label>Company Name:</label>
+            <input type="text" id="regCompany" style="width:100%; padding:8px; margin:8px 0 15px 0;" required>
+            <label>Slogan (Optional):</label>
+            <input type="text" id="regSlogan" style="width:100%; padding:8px; margin:8px 0 15px 0;">
+            <button onclick="nextRegisterStep(2)" style="background:#006400; color:white; padding:12px; width:100%; border:none; border-radius:4px;">Next</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div id="registerStep3" style="display:none;">
+            <label>Main Category:</label>
+            <input type="text" id="regCategory" placeholder="e.g. Plumbing, Restaurant" style="width:100%; padding:8px; margin:8px 0 15px 0;" required>
+            <button onclick="nextRegisterStep(3)" style="background:#006400; color:white; padding:12px; width:100%; border:none; border-radius:4px;">Next</button>
+        </div>
+
+        <!-- Step 4 -->
+        <div id="registerStep4" style="display:none;">
+            <label>Location:</label>
+            <input type="text" id="regLocation" style="width:100%; padding:8px; margin:8px 0 15px 0;" required>
+            <button onclick="nextRegisterStep(4)" style="background:#006400; color:white; padding:12px; width:100%; border:none; border-radius:4px;">Next</button>
+        </div>
+
+        <!-- Step 5 -->
+        <div id="registerStep5" style="display:none;">
+            <label>Contact Number 1:</label>
+            <input type="tel" id="regPhone1" style="width:100%; padding:8px; margin:8px 0 4px 0;" required>
+            <small>Instruction 1 (e.g. Reception / Sales):</small>
+            <input type="text" id="regInstr1" style="width:100%; padding:8px; margin:8px 0 15px 0;">
+
+            <label>Contact Number 2:</label>
+            <input type="tel" id="regPhone2" style="width:100%; padding:8px; margin:8px 0 4px 0;">
+            <small>Instruction 2 (e.g. WhatsApp / Emergency):</small>
+            <input type="text" id="regInstr2" style="width:100%; padding:8px; margin:8px 0 15px 0;">
+            <button onclick="nextRegisterStep(5)" style="background:#006400; color:white; padding:12px; width:100%; border:none; border-radius:4px;">Next</button>
+        </div>
+
+        <!-- Step 6 -->
+        <div id="registerStep6" style="display:none;">
+            <button onclick="submitRegistration()" style="background:#006400; color:white; padding:12px; width:100%; border:none; border-radius:4px;">Submit Registration</button>
+        </div>
+    </div>
+</div>
+
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span onclick="document.getElementById('searchModal').style.display='none'" style="float:right; font-size:28px; cursor:pointer;">×</span>
+            <h2>Search the Directory</h2>
+			
+            <!-- Your search form here -->
+        <p style="margin-top:15px; font-size:13px; color:#555;">Popular searches: Plumbing, Doctor, Restaurant, Electrician, Accommodation, Mechanic, Salon</p>
+    </div>
+</div>
+        </div>
+    </div>
+
+<script>
+    let currentPage = 0;
+    let pages = [];
+    let userLevel = 0;
+    let advertsViewed = 0;
+
+    function initPagination() {
+        const container = document.getElementById('listingsMaster');
+        if (!container) return;
+
+        const children = Array.from(container.children);
+        pages = [];
+        let currentPageList = [];
+        let currentHeight = 0;
+        const maxHeight = 925;
+
+        children.forEach(item => {
+            const clone = item.cloneNode(true);
+            const h = item.classList.contains('maincat') ? 36 : 29;
+            if (currentHeight + h > maxHeight && currentPageList.length > 0) {
+                pages.push(currentPageList);
+                currentPageList = [];
+                currentHeight = 0;
+            }
+            currentPageList.push(clone);
+            currentHeight += h;
+        });
+
+        if (currentPageList.length > 0) pages.push(currentPageList);
+        showPage(0);
+    }
+
+    function showPage(page) {
+        currentPage = page;
+        const container = document.getElementById('listingsMaster');
+        container.innerHTML = '';
+
+        if (pages[page]) {
+            pages[page].forEach((item, idx) => {
+                const clone = item.cloneNode(true);
+                if (item.classList.contains('maincat') && idx === pages[page].length - 1) {
+                    clone.classList.add('split');
+                }
+                container.appendChild(clone);
+            });
+        }
+
+        const pagebox = document.getElementById('pagebox');
+        if (pagebox) pagebox.innerHTML = `PAGE<br>${page + 1} of ${pages.length || 1}`;
+
+        updateAdsForPage();
+        updateAlphaDisplay();
+        addWAIcons();
+        makeNumbersClickable();   // ← Numbers + WA
+        updateBanners();
+    }
+
+    function prevPage() {
+        if (currentPage > 0) showCompulsoryAdBeforePrev();
+    }
+
+    function nextPage() { 
+        if (currentPage < pages.length - 1) showPage(currentPage + 1); 
+    }
+
+    function showCompulsoryAdBeforePrev() {
+        const adOverlay = document.createElement('div');
+        adOverlay.style.cssText = `position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.92); z-index:2000; display:flex; align-items:center; justify-content:center; color:white; flex-direction:column;`;
+        adOverlay.innerHTML = `
+            <h2>Please watch this short advert</h2>
+            <div style="width:520px; height:310px; background:#111; display:flex; align-items:center; justify-content:center; font-size:18px; border:3px solid #006400;">
+                SPONSORSHIP ADVERTISEMENT<br>(Your ad here)
+            </div>
+            <p>You will continue in <span id="prevTimer">8</span> seconds...</p>
+        `;
+        document.body.appendChild(adOverlay);
+
+        let timeLeft = 8;
+        const timerEl = document.getElementById('prevTimer');
+        const interval = setInterval(() => {
+            timeLeft--;
+            timerEl.textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                adOverlay.remove();
+                showPage(currentPage - 1);
+            }
+        }, 1000);
+    }
+
+    function addWAIcons() {
+        document.querySelectorAll('.numbers').forEach(num => {
+            const instr = num.parentElement ? num.parentElement.querySelector('.instr') : null;
+            if (instr && instr.textContent.toLowerCase().includes('whatsapp')) {
+                if (!num.querySelector('.wa-icon')) {
+                    num.innerHTML += ' <span class="wa-icon">📱</span>';
+                }
+            }
+        });
+    }
+
+    function makeNumbersClickable() {
+        document.querySelectorAll('.numbers').forEach(num => {
+            const raw = num.textContent.trim().replace(/[^0-9+]/g, '');
+            if (raw.length < 8) return;
+
+            const instr = num.parentElement ? num.parentElement.querySelector('.instr') : null;
+            const isWA = instr && instr.textContent.toUpperCase().includes('WHATSAPP');
+
+            if (isWA && !num.querySelector('.wa-icon')) {
+                num.innerHTML += ' <span class="wa-icon">📱</span>';
+            }
+
+            num.style.cursor = 'pointer';
+            num.onclick = () => {
+                if (isWA) {
+                    window.open(`https://wa.me/${raw}`, '_blank');
+                } else {
+                    window.location.href = `tel:${raw}`;
+                }
+            };
+        });
+    }
+
+    function updateAdsForPage() {
+        const current = currentPage + 1;
+        document.querySelectorAll('.page-ad').forEach(ad => {
+            ad.style.display = (parseInt(ad.getAttribute('data-page')) === current) ? 'block' : 'none';
+        });
+        const grokAd = document.getElementById('grok-ad');
+        if (grokAd) grokAd.style.display = (current === 1) ? 'block' : 'none';
+    }
+
+    function updateBanners() {
+        const topBanner = document.querySelector('.topbanner');
+        if (topBanner) {
+            const messages = [
+                "🌟 EXCLUSIVE PREMIUM SPONSORSHIP OPPORTUNITY 🌟",
+                "PREMIUM TOP BANNER AVAILABLE - R12,000 p.a."
+            ];
+            topBanner.innerHTML = messages[currentPage % messages.length];
+        }
+    }
+	
+	// ------ ALPHA-DISPLAY ------
+    function updateAlphaDisplay() {
+    const alphaEl = document.getElementById('alphaDisplay');
+    if (!alphaEl) return;
+
+    // Very strict skip list
+    const skipList = [
+        "COMMUNITY", "ANIMAL", "CHARITIES", "ORGANISATIONS", "CHURCHES", 
+        "CONSERVANCIES", "GARDEN", "SHOPS", "SERVICES", "GENERAL", 
+        "BONUS", "ADDITIONAL", "LISTINGS"
+    ];
+
+    const visibleMaincats = Array.from(document.querySelectorAll('.maincat'))
+        .map(el => el.textContent.trim())
+        .filter(text => {
+            if (!text) return false;
+            const upper = text.toUpperCase();
+            return !skipList.some(skip => upper.includes(skip));
+        });
+
+    if (visibleMaincats.length === 0) {
+        alphaEl.textContent = 'A–Z';
+        return;
+    }
+
+    const letters = visibleMaincats
+        .map(text => text.charAt(0).toUpperCase())
+        .filter(l => /[A-Z]/.test(l));
+
+    if (letters.length === 0) {
+        alphaEl.textContent = 'A–Z';
+        return;
+    }
+
+    const unique = [...new Set(letters)].sort();
+    const min = unique[0];
+    const max = unique[unique.length - 1];
+
+    alphaEl.textContent = (min === max) ? min : `${min}–${max}`;
+    }
+	
+    // License
+    const ADMIN_SECRET = "crendon2025";
+    function checkAdminAccess() {
+        const input = prompt("Enter Admin Code to manage licenses:");
+        if (input === ADMIN_SECRET) {
+            alert("✅ Full Admin Access Granted!");
+        } else if (input !== null) {
+            alert("❌ Incorrect code. Access denied.");
+        }
+    }
+    setTimeout(() => {
+        const licenseEl = document.querySelector('.license');
+        if (licenseEl) {
+            licenseEl.style.cursor = 'pointer';
+            licenseEl.addEventListener('dblclick', checkAdminAccess);
+        }
+    }, 1000);
+	
+	// Go To Page
+function showGoToPopup() {
+    document.getElementById('goToPopup').style.display = 'flex';
+    document.getElementById('pageInput').focus();
+}
+function closePopup() {
+    document.getElementById('goToPopup').style.display = 'none';
+}
+function goToPage() {
+    const input = parseInt(document.getElementById('pageInput').value);
+    const total = pages.length || 1;
+    if (input >= 1 && input <= total) {
+        closePopup();
+        showCompulsoryAdBeforePage(input - 1);
+    } else {
+        alert(`Please enter a number between 1 and ${total}`);
+    }
+}
+function showCompulsoryAdBeforePage(targetPage) {
+    const adOverlay = document.createElement('div');
+    adOverlay.style.cssText = `position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.92); z-index:2000; display:flex; align-items:center; justify-content:center; color:white; flex-direction:column;`;
+    adOverlay.innerHTML = `
+        <h2>Please watch this short advert</h2>
+        <div style="width:520px; height:310px; background:#111; display:flex; align-items:center; justify-content:center; font-size:18px; border:3px solid #006400;">
+            SPONSORSHIP ADVERTISEMENT<br>(Your ad here)
+        </div>
+        <p>You will continue in <span id="goToTimer">8</span> seconds...</p>
+    `;
+    document.body.appendChild(adOverlay);
+
+    let timeLeft = 8;
+    const timerEl = document.getElementById('goToTimer');
+    const interval = setInterval(() => {
+        timeLeft--;
+        timerEl.textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            adOverlay.remove();
+            showPage(targetPage);
+        }
+    }, 1000);
+}
+
+// motivational
+const motivationalQuotes = [
+    "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "The only way to do great work is to love what you do.",
+    "AI is a tool. Your creativity is the magic.",
+    "Small daily improvements create stunning long-term results.",
+    "Grok by xAI: Understanding the Universe, one question at a time."
+];
+
+let currentQuoteIndex = 0;
+
+function startMotivationalReel() {
+    const textEl = document.getElementById('motivationalText');
+    if (!textEl) return;
+
+    function showNextQuote() {
+        textEl.style.opacity = 0;
+        setTimeout(() => {
+            textEl.textContent = motivationalQuotes[currentQuoteIndex];
+            textEl.style.transition = 'opacity 0.8s';
+            textEl.style.opacity = 1;
+            currentQuoteIndex = (currentQuoteIndex + 1) % motivationalQuotes.length;
+        }, 600);
+    }
+
+    showNextQuote();
+    setInterval(showNextQuote, 8000);
+}
+
+   
+    function showSearchModal() { document.getElementById('searchModal').style.display = 'flex'; }
+    function closeSearchModal() { document.getElementById('searchModal').style.display = 'none'; }
+	
+	// ==================== MODALS WITH COMPULSORY AD VIEW ====================
+
+function showRegisterModal() {
+    showCompulsoryAd(() => {
+        document.getElementById('registerModal').style.display = 'flex';
+    });
+}
+
+function showSearchModal() {
+    showCompulsoryAd(() => {
+        document.getElementById('searchModal').style.display = 'flex';
+    });
+}
+
+// Generic compulsory ad viewer
+function showCompulsoryAd(callback) {
+    const adOverlay = document.createElement('div');
+    adOverlay.style.cssText = `
+        position:fixed; top:0; left:0; width:100%; height:100%; 
+        background:rgba(0,0,0,0.92); z-index:2000; 
+        display:flex; align-items:center; justify-content:center; 
+        color:white; flex-direction:column;
+    `;
+    adOverlay.innerHTML = `
+        <h2>Please watch this short advert to continue</h2>
+        <div style="width:520px; height:310px; background:#111; margin:20px 0; 
+                    display:flex; align-items:center; justify-content:center; 
+                    font-size:18px; border:3px solid #006400;">
+            SPONSORSHIP ADVERTISEMENT<br>(Your ad here)
+        </div>
+        <p>You can continue in <span id="modalTimer">8</span> seconds...</p>
+    `;
+    document.body.appendChild(adOverlay);
+
+    let timeLeft = 8;
+    const timerEl = document.getElementById('modalTimer');
+    const interval = setInterval(() => {
+        timeLeft--;
+        if (timerEl) timerEl.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            adOverlay.remove();
+            callback();   // Open the requested modal
+            trackAdView(); // Count this ad view toward level
+        }
+    }, 1000);
+}
+
+function nextRegisterStep(current) {
+    showCompulsoryAd(() => {
+        document.getElementById('registerStep' + current).style.display = 'none';
+        currentRegisterStep = current + 1;
+        document.getElementById('stepNumber').textContent = currentRegisterStep;
+        document.getElementById('registerStep' + currentRegisterStep).style.display = 'block';
+    });
+}
+
+function submitRegistration() {
+    showCompulsoryAd(() => {
+        alert('Thank you! Your registration has been received. We will contact you soon.');
+        closeRegisterModal();
+    });
+}
+
+function showCompulsoryAd(callback) {
+    const adOverlay = document.createElement('div');
+    adOverlay.style.cssText = `position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.92); z-index:2000; display:flex; align-items:center; justify-content:center; color:white; flex-direction:column;`;
+    
+    adOverlay.innerHTML = `
+        <h2>Please watch this short advert</h2>
+        <div style="width:520px; height:310px; background:#111; margin:20px 0; display:flex; align-items:center; justify-content:center; font-size:18px; border:3px solid #006400;">
+            SPONSORSHIP ADVERTISEMENT<br>(Your ad here)
+        </div>
+        <p>You can continue in <span id="adTimer">8</span> seconds...</p>
+    `;
+    document.body.appendChild(adOverlay);
+
+    let timeLeft = 8;
+    const timerEl = document.getElementById('adTimer');
+    const interval = setInterval(() => {
+        timeLeft--;
+        if (timerEl) timerEl.textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            adOverlay.remove();
+            callback();
+            trackAdView();   // Count toward level
+        }
+    }, 1000);
+}
+
+function closeRegisterModal() {
+    document.getElementById('registerModal').style.display = 'none';
+    // Reset steps for next time
+    currentRegisterStep = 1;
+    document.getElementById('stepNumber').textContent = 1;
+    document.getElementById('registerStep1').style.display = 'block';
+    document.getElementById('registerStep2').style.display = 'none';
+}
+
+    window.skipAd = function() {
+        clearInterval(timer);
+        adOverlay.remove();
+        // TODO: Open payment option or skip all
+        if (confirm("Skip all remaining ads for R150?")) {
+            alert("Payment link would go here (R150 to licensee account)");
+            closeRegisterModal();
+        } else {
+            callback(); // Continue with normal flow
+        }
+    };
+	
+	function updateMembershipInfo() {
+    document.getElementById('memberRef').textContent = "SCM-00001";   // Change as needed
+    document.getElementById('totalMembers').textContent = "248";      // Update count as members grow
+}
+
+
+window.onload = function() {
+    initPagination();
+    updateBanners();
+    addWAIcons();
+    makeNumbersClickable();
+    updateAlphaDisplay();
+    updateLevelDisplay();      // Updated Level & Edition calls
+    updateEdition();           // ← Make sure this function exists
+    startMotivationalReel();   // ← Your motivational reel
+	updateMembershipInfo();    // Add this line inside your window.onload function:
+
+};
+
+// Level tracking function
+advertsViewed = advertsViewed || 0;   // safety in case it doesn't exist yet
+
+function trackAdView() {
+    advertsViewed++;
+    
+    if (advertsViewed >= 120) {
+        userLevel++;
+        advertsViewed = 0;
+
+        const levelEl = document.getElementById('levelDisplay');
+        if (levelEl) {
+            levelEl.textContent = `LEVEL ${userLevel}`;
+        }
+
+        if (userLevel % 120 === 0 && userLevel > 0) {
+            alert(`🎉 Congratulations!\n\nYou have reached Level ${userLevel}!\n\nYou qualify for a FREE 160×320 advert slot.\nPlease submit your advert within 14 days.`);
+        }
+    }
+}
+// ==================== LEVEL DISPLAY ====================
+function updateLevelDisplay() {
+    const levelEl = document.getElementById('levelDisplay');
+    if (levelEl) {
+        levelEl.textContent = `LEVEL ${userLevel}`;
+    }
+}
+
+// ==================== EDITION ====================
+function updateEdition() {
+    const dateEl = document.getElementById('editionDate');
+    if (!dateEl) {
+        console.warn("⚠️ Could not find #editionDate element");
+        return;
+    }
+
+    const baseDate = new Date(2026, 6, 3);   // 3 July 2026
+    const baseEdition = 25;
+
+    const now = new Date();
+    const daysDiff = Math.floor((now - baseDate) / (1000 * 60 * 60 * 24));
+    const weeksDiff = Math.floor(daysDiff / 7);
+
+    const currentEdition = baseEdition + weeksDiff;
+    const editionDateObj = new Date(baseDate);
+    editionDateObj.setDate(editionDateObj.getDate() + (weeksDiff * 7));
+
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    const formattedDate = editionDateObj.toLocaleDateString('en-ZA', options);
+
+    dateEl.innerHTML = `Edition ${currentEdition} of 52<br>${formattedDate}`;
+}
+// ==================== MULTI-STEP REGISTRATION WITH ADS ====================
+let currentRegisterStep = 1;
+
+function nextRegisterStep(current) {
+    showCompulsoryAd(() => {
+        document.getElementById('registerStep' + current).style.display = 'none';
+        currentRegisterStep = current + 1;
+        document.getElementById('stepNumber').textContent = currentRegisterStep;
+        document.getElementById('registerStep' + currentRegisterStep).style.display = 'block';
+    });
+}
+
+function submitRegistration() {
+    showCompulsoryAd(() => {
+        const formData = {
+            _subject: "New Business Registration - South Coast Directory",
+            name: document.getElementById('regName').value,
+            company: document.getElementById('regCompany').value,
+            slogan: document.getElementById('regSlogan').value || "None provided",
+            category: document.getElementById('regCategory').value,
+            location: document.getElementById('regLocation').value,
+            phone1: document.getElementById('regPhone1').value,
+            instruction1: document.getElementById('regInstr1').value || "None",
+            phone2: document.getElementById('regPhone2').value || "None",
+            instruction2: document.getElementById('regInstr2').value || "None",
+            source: "South Coast Quick Reference Directory"
+        };
+
+        fetch('https://formspree.io/f/xkolebnp', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('✅ Thank you! Your registration has been received.\nWe will contact you soon.');
+            } else {
+                alert('⚠️ Something went wrong. Please try again or contact us directly.');
+            }
+        })
+        .catch(() => {
+            alert('Network error. Please try again later.');
+        });
+
+        closeRegisterModal();
+    });
+}
+
+function showCompulsoryAd(callback) {
+    const adOverlay = document.createElement('div');
+    adOverlay.style.cssText = `position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.92); z-index:2000; display:flex; align-items:center; justify-content:center; color:white; flex-direction:column;`;
+    adOverlay.innerHTML = `
+        <h2>Please watch this short advert</h2>
+        <div style="width:520px; height:310px; background:#111; margin:20px 0; display:flex; align-items:center; justify-content:center; font-size:18px; border:3px solid #006400;">
+            SPONSORSHIP ADVERTISEMENT<br>(Your ad here)
+        </div>
+        <p>You can continue in <span id="adTimer">8</span> seconds...</p>
+    `;
+    document.body.appendChild(adOverlay);
+
+    let timeLeft = 8;
+    const timerEl = document.getElementById('adTimer');
+    const interval = setInterval(() => {
+        timeLeft--;
+        if (timerEl) timerEl.textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            adOverlay.remove();
+            callback();
+            trackAdView();
+        }
+    }, 1000);
+}
+
+function closeRegisterModal() {
+    document.getElementById('registerModal').style.display = 'none';
+    currentRegisterStep = 1;
+    document.getElementById('stepNumber').textContent = 1;
+    document.getElementById('registerStep1').style.display = 'block';
+    if (document.getElementById('registerStep2')) document.getElementById('registerStep2').style.display = 'none';
+}
+</script>
+
+<!-- Go To Page Popup -->
+<div id="goToPopup" class="modal" style="display:none;">
+    <div class="modal-content" style="width:380px; text-align:center;">
+        <h2 style="color:#006400; margin:0 0 15px 0;">Go to Page</h2>
+        <p>Enter page number (1 to <span id="totalPages">5</span>)</p>
+        <input type="number" id="pageInput" min="1" style="width:120px; padding:10px; font-size:18px; text-align:center; margin:15px 0;">
+        <br><br>
+        <button onclick="goToPage()" style="background:#006400; color:white; padding:10px 24px; border:none; border-radius:4px; margin-right:10px;">Go</button>
+        <button onclick="closeGoToPopup()" style="background:#ccc; padding:10px 24px; border:none; border-radius:4px;">Cancel</button>
+    </div>
+</div>
+</body>
+</html>
+
