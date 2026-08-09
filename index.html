@@ -79,34 +79,61 @@
         .slogan { font: 9px Helvetica; color: #444; line-height: 1.05; }
 
  /* Contact block - fill LEFT column first */
-.contact-block { 
-    display:flex; 
-    gap:4px; 
-    justify-content:flex-start;   /* changed from flex-end */
-    align-items:center; 
-    flex-wrap:nowrap; 
-    min-width:245px; 
-    padding-right:4px; 
+.contact-block {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    min-width: 260px;          /* was previously tighter */
+    padding-right: 6px;
 }
-.contact-pair { 
-    min-width: 112px; 
-    text-align:center; 
+.contact-pair {
+    min-width: 120px;          /* slightly wider */
+    text-align: center;
 }
 
         .instr { font:9px Helvetica,Arial,sans-serif; color:#3498db; margin-bottom:1px; white-space:nowrap; display:block; }
-		.numbers {
-    font: bold 14.5px Helvetica; 
-    line-height: 1; 
-    display:flex;  
-    justify-content:center; 
-    gap:4px;
-    margin-left: 1px;   /* ← Adjust this value as needed */
-	}
+.numbers {
+    font: bold 14.5px Helvetica, Arial, sans-serif;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    white-space: nowrap;       /* prevents wrapping of +27 */
+}
 		.wa-icon { color:#25D366; font-size:15px; }
 
 		/* Bottom Banner */
-    .bottom-banner { position:absolute; bottom:400px; left:175px; width:755px; height:28px; background:#006400; color:white; display:flex; align-items:center; justify-content:space-between; padding:0 12px; font-size:11px; z-index:50; }
-    .footer-copyright { position:absolute; bottom:375px; left:175px; width:755px; height:22px; background:#006400; color:white; font-size:10px; line-height:22px; text-align:center; z-index:50; }
+    .bottom-banner {
+    position: absolute;
+    bottom: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 755px;
+    height: 28px;
+    background: #006400;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    font-size: 11px;
+    z-index: 50;
+}
+   .footer-copyright {
+    position: absolute;
+    bottom: 375px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 755px;
+    height: 22px;
+    background: #006400;
+    color: white;
+    font-size: 10px;
+    line-height: 22px;
+    text-align: center;
+    z-index: 50;
+}
 
     .adcol { position:absolute; right:144px; top:188px; width:162px; height:1180px; z-index:15; }
     .ad { width:160px; height:340px; margin-bottom:12px; border:3px solid #006400; overflow:hidden; background:#f0f0f0; }
@@ -147,7 +174,7 @@
         </div>
         
         <div class="logo-space">
-            		<img src="https://i.ibb.co/Xr1JyK3h/NPO-generic-logo.png" alt="NPO LOGO" style="width:100%; height:100%; object-fit:cover;">
+            		<img src="https://i.ibb.co/7JS56RW3/Green-White-Simple-Minimalist-Healthy-Food-Logo.png" alt="NPO LOGO" style="width:100%; height:100%; object-fit:cover;">
         </div>
 
 		<div class="alpha-display" id="alphaDisplay" style="top:47px;">A</div>
