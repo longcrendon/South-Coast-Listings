@@ -31,6 +31,11 @@
     .btn { background:#006400; color:white; border:none; padding:6px 14px; font:bold 12px Helvetica; border-radius:4px; cursor:pointer; }
 
     .logo-space { position:absolute; width:80px; height:70px; background:white; border:4px solid #006400; border-radius:5px; overflow:hidden; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.2); top:45px; right:5px; }
+	.logo-space img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;          /* or try 'auto' */
+    -ms-interpolation-mode: nearest-neighbor;
+	}
     .alpha-display { position:absolute; right:93px; top:47px; font:22px "Franklin Gothic Medium",Helvetica; color:#006400; border:2px solid #006400; background:white; width:50px; height:32px; text-align:center; line-height:26px; z-index:25; }
     .level { position:absolute; right:94px; top:80px; font:9px Helvetica; color:#006400; font-weight:bold; background:white; width:46px; height:20px; text-align:center; line-height:20px; z-index:25; }
 	.membership-info {
@@ -48,10 +53,10 @@
 
     /* ==================== FRAMES & LISTINGS (your latest) ==================== */
     .green-frame { position:absolute; left:156px; top:188px; width:790px; height:1055px; border:5px solid #006400; background:white; z-index:1; }
-    .black-frame { position:absolute; left:159px; top:193px; width:785px; height:1045px; border:4px solid #000; z-index:2; }
+    .black-frame { position:absolute; left:161px; top:193px; width:780px; height:1045px; border:4px solid #000; z-index:2; }
 
     .listings-area { 
-        position:absolute; left:164px; top:198px; width:755px; height:960px; 
+        position:absolute; left:174px; top:198px; width:755px; height:960px; 
         padding:6px 12px 75px 12px; background:white; z-index:10; overflow:hidden; 
     }
 
@@ -83,11 +88,11 @@
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    min-width: 260px;          /* was previously tighter */
+    min-width: 260px;
     padding-right: 6px;
 }
 .contact-pair {
-    min-width: 120px;          /* slightly wider */
+    min-width: 120px;
     text-align: center;
 }
 
@@ -99,16 +104,15 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
-    white-space: nowrap;       /* prevents wrapping of +27 */
+    white-space: nowrap;
 }
 		.wa-icon { color:#25D366; font-size:15px; }
 
 		/* Bottom Banner */
-    .bottom-banner {
+.bottom-banner {
     position: absolute;
     bottom: 400px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 175px;
     width: 755px;
     height: 28px;
     background: #006400;
@@ -120,11 +124,10 @@
     font-size: 11px;
     z-index: 50;
 }
-   .footer-copyright {
+.footer-copyright {
     position: absolute;
     bottom: 375px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 175px;
     width: 755px;
     height: 22px;
     background: #006400;
@@ -1782,4 +1785,3 @@ function closeRegisterModal() {
 </div>
 </body>
 </html>
-
