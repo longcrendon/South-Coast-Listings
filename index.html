@@ -69,47 +69,52 @@
     .maincat.split::after { content:"continued..."; font: bold 9px Helvetica; color:red; position:absolute; right:6px; top:4px; display:block; }
 
 		/* Restore subcat & loc styling */
-.subcat { 
+	.subcat { 
     font:9.5px Arial; 
     color:#34C0FF; 
-}
-.loc { 
+	}
+	.loc { 
     font: 9.5px Helvetica, Arial, sans-serif; 
     line-height: 1.1; 
     color:#333; 
-}
+	}
 
         .company-block { display:flex; flex-direction:column; justify-content:center; text-align:right; padding-right:6px; min-width:270px; }
         .company { font: bold 12px Helvetica; line-height: 1.12; margin-bottom: 1px;}
         .slogan { font: 9px Helvetica; color: #444; line-height: 1.05; }
 
- /* Contact block - fill LEFT column first */
-.contact-block {
+	/* Contact block - fill LEFT column first */
+	.contact-block {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
+    justify-content: flex-start;   /* keeps everything left-aligned consistently */
+    gap: 8px;
     min-width: 260px;
-    padding-right: 6px;
-}
-.contact-pair {
-    min-width: 120px;
-    text-align: center;
-}
+    padding-right: 4px;
+	}
+	.contact-pair {
+    min-width: 118px;
+    text-align: left;              /* changed from center for cleaner alignment */
+	}
 
-        .instr { font:9px Helvetica,Arial,sans-serif; color:#3498db; margin-bottom:1px; white-space:nowrap; display:block; }
-.numbers {
+    .instr { font:9px Helvetica,Arial,sans-serif; color:#3498db; margin-bottom:1px; white-space:nowrap; display:block; }
+	.numbers {
     font: bold 14.5px Helvetica, Arial, sans-serif;
-    line-height: 1;
+    line-height: 1.1;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
+    gap: 5px;
     white-space: nowrap;
-}
-		.wa-icon { color:#25D366; font-size:15px; }
+	}
+
+	.wa-icon {
+    font-size: 15px;
+    color: #25D366;
+    margin-left: 2px;              /* small consistent space after the number */
+	}
 
 		/* Bottom Banner */
-.bottom-banner {
+	.bottom-banner {
     position: absolute;
     bottom: 400px;
     left: 175px;
@@ -123,8 +128,8 @@
     padding: 0 12px;
     font-size: 11px;
     z-index: 50;
-}
-.footer-copyright {
+	}
+	.footer-copyright {
     position: absolute;
     bottom: 375px;
     left: 175px;
@@ -136,7 +141,7 @@
     line-height: 22px;
     text-align: center;
     z-index: 50;
-}
+	}
 
     .adcol { position:absolute; right:144px; top:188px; width:162px; height:1180px; z-index:15; }
     .ad { width:160px; height:340px; margin-bottom:12px; border:3px solid #006400; overflow:hidden; background:#f0f0f0; }
@@ -474,7 +479,7 @@
     <div class="loc">South Coast,KZN<br></div>
     <div class="company-block"><span class="company">Pieta Venter</span><span class="slogan">Entertainer</span></div>
     <div class="contact-block">
-    <div class="contact-pair"><div <class="numbers" style="color:#3498db;">Manager</div><div class="numbers">061 071 2026</div></div>
+    <div class="contact-pair"><div class="instr" style="color:#3498db;">Manager</div><div class="numbers">061 071 2026</div></div>
     <div class="contact-pair"><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
     </div>
 	</div>
