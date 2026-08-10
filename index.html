@@ -1327,28 +1327,22 @@
         });
     }
 
-    function makeNumbersClickable() {
-        document.querySelectorAll('.numbers').forEach(num => {
-            const raw = num.textContent.trim().replace(/[^0-9+]/g, '');
-            if (raw.length < 8) return;
+	function makeNumbersClickable() {
+    // Select all elements that contain phone numbers
+    const numberElements = document.querySelectorAll('.numbers');
 
-            const instr = num.parentElement ? num.parentElement.querySelector('.instr') : null;
-            const isWA = instr && instr.textContent.toUpperCase().includes('WHATSAPP');
+    numberElements.forEach(function(el) {
+        let raw = el.textContent.trim().replace(/\s+/g, ''); // remove spaces
 
-            if (isWA && !num.querySelector('.wa-icon')) {
-                num.innerHTML += ' <span class="wa-icon">📱</span>';
-            }
+        // Only process if it looks like a South African number starting with 0
+        if (/^0\d{9}$/.test(raw)) {
+            const international = '+27' + raw.substring(1); // 0 → +27
 
-            num.style.cursor = 'pointer';
-            num.onclick = () => {
-                if (isWA) {
-                    window.open(`https://wa.me/${raw}`, '_blank');
-                } else {
-                    window.location.href = `tel:${raw}`;
-                }
-            };
-        });
-    }
+            // Create the clickable link
+            el.innerHTML = `<a href="tel:${international}" style="color:inherit; text-decoration:none;">${el.textContent.trim()}</a>`;
+        }
+    });
+}
 
     function updateAdsForPage() {
         const current = currentPage + 1;
