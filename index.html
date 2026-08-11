@@ -149,7 +149,35 @@
         /* Modals */
         .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; align-items:center; justify-content:center; }
         .modal-content { background:white; padding:25px; border-radius:8px; width:420px; max-height:90vh; overflow:auto; }
-    </style>
+	/* ===== SIMPLE MOBILE IMPROVEMENT ===== */
+	@media screen and (max-width: 1260px) {
+    html, body {
+        overflow-x: auto;          /* allows gentle horizontal scroll if needed */
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .page-wrapper {
+        width: 100% !important;
+        min-width: 320px;
+        max-width: 1260px;
+        margin: 0 auto;
+        transform-origin: top left;
+    }
+
+    /* Prevent the page from becoming tiny */
+    body {
+        min-width: 320px;
+    }
+}
+
+/* Optional – makes the page feel a bit larger on phones */
+@media screen and (max-width: 900px) {
+    .page-wrapper {
+        transform: scale(0.85);
+        transform-origin: top center;
+    }
+}   
+</style>
 </head>
 <body>
     <div class="page-wrapper">
