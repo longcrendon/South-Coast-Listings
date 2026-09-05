@@ -27,10 +27,10 @@
     .motivational { position:absolute; left:0; top:157px; width:972px; height:17px; background:white; text-align:center; line-height:15px; font-style:italic; font-size:11px; color:#006400; }
 
     .lfs { position:absolute; left:823px; top:23px; width:150px; height:118px; z-index:30; }
-    .btns { position:absolute; right:6px; top:8px; display:flex; gap:8px; z-index:40; }
+    .btns { position:absolute; right:6px; top:1px; display:flex; gap:8px; z-index:40; }
     .btn { background:#006400; color:white; border:none; padding:6px 14px; font:bold 12px Helvetica; border-radius:4px; cursor:pointer; }
 
-    .logo-space { position:absolute; width:80px; height:70px; background:white; border:4px solid #006400; border-radius:5px; overflow:hidden; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.2); top:45px; right:5px; }
+    .logo-space { position:absolute; width:75px; height:70px; background:white; border:4px solid #006400; border-radius:3px; overflow:hidden; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.2); top:32px; right:5px; }
 	.logo-space img {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;          /* or try 'auto' */
@@ -49,7 +49,7 @@
     width:160px;
     z-index:25;
 	}
-    .license { position:absolute; font:7.5px Helvetica,Arial,sans-serif; text-align:right; line-height:8px; top:125px; right:3px; width:160px; height:32px; overflow:hidden; color:#444; z-index:35; }
+    .license { position:absolute; font:7.5px Helvetica,Arial,sans-serif; text-align:right; line-height:8px; top:108px; right:3px; width:160px; height:32px; overflow:hidden; color:#444; z-index:35; }
 
     /* ==================== FRAMES & LISTINGS (your latest) ==================== */
     .green-frame { position:absolute; left:156px; top:188px; width:790px; height:1055px; border:5px solid #006400; background:white; z-index:1; }
@@ -116,7 +116,7 @@
 		/* Bottom Banner */
 	.bottom-banner {
     position: absolute;
-    bottom: 400px;
+    top: 1170px;
     left: 175px;
     width: 755px;
     height: 28px;
@@ -128,10 +128,10 @@
     padding: 0 12px;
     font-size: 11px;
     z-index: 50;
-	}
+}
 	.footer-copyright {
     position: absolute;
-    bottom: 375px;
+    top: 1206px;
     left: 175px;
     width: 755px;
     height: 22px;
@@ -141,7 +141,8 @@
     line-height: 22px;
     text-align: center;
     z-index: 50;
-	}
+}
+
 
     .adcol { position:absolute; right:144px; top:188px; width:162px; height:1180px; z-index:15; }
     .ad { width:160px; height:340px; margin-bottom:12px; border:3px solid #006400; overflow:hidden; background:#f0f0f0; }
@@ -149,7 +150,8 @@
         /* Modals */
         .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; align-items:center; justify-content:center; }
         .modal-content { background:white; padding:25px; border-radius:8px; width:420px; max-height:90vh; overflow:auto; }
-	/* ===== SIMPLE MOBILE IMPROVEMENT ===== */
+    
+		/* ===== SIMPLE MOBILE IMPROVEMENT ===== */
 	@media screen and (max-width: 1260px) {
     html, body {
         overflow-x: auto;          /* allows gentle horizontal scroll if needed */
@@ -157,11 +159,12 @@
     }
 
     .page-wrapper {
-        width: 100% !important;
-        min-width: 320px;
-        max-width: 1260px;
+        width: 1260px;
+        height: 1580px;
         margin: 0 auto;
-        transform-origin: top left;
+		position: relative;
+		background: white;
+		overflow: hidden;
     }
 
     /* Prevent the page from becoming tiny */
@@ -176,15 +179,12 @@
         transform: scale(0.85);
         transform-origin: top center;
     }
-}   
 </style>
 </head>
 <body>
-    <div class="page-wrapper">
+    <div class="page-wraper">
         <!-- YOUR HEADER HTML (as provided) -->
         <div class="header">
-            <!-- [Paste your full header HTML here - the one you sent last] -->
-			        <div class="header">
             <div class="social" style="position:absolute; left:0; top:5px; width:970px; height:13px; background:#e0e0e0; font-size:9px; line-height:13px; padding:0 8px; box-sizing:border-box;">
                 Facebook | Instagram | WhatsApp Channel – 
                 <a href="https://chat.whatsapp.com/CWHjVWf84tnKjGlrxPunMn" target="_blank" style="color:#006400; text-decoration:none;">WhatsApp</a> | 
@@ -208,9 +208,9 @@
             <button onclick="showRegisterModal()" class="btn">Register</button>
             <button onclick="showSearchModal()" class="btn">Search</button>
         </div>
-
-		<div class="logo-space">	
-		<img src="https://i.ibb.co/Xrqm3x6T/LOGO-icon-png-75px-w.jpg" alt="LOGO icon png 75px" style="width:100%; height:100%; object-fit:cover;">
+        
+        <div class="logo-space">	
+		<img src="https://i.ibb.co/fYnjMqSF/LOGO-icon-png-75px-w.jpg" alt="LOGO icon png 75px w" style="width:100%; height:100%; object-fit:cover;">
         </div>
 
 		<div class="alpha-display" id="alphaDisplay" style="top:47px;">A</div>
@@ -229,7 +229,6 @@
     </div>
 </div>
         </div>
-        </div>
 
         <div class="green-frame"></div>
         <div class="black-frame"></div>
@@ -237,7 +236,18 @@
         <div class="listings-area">
             <div id="listingsMaster">
                 <!-- Your full listings go here -->
-<div class="maincat">Antique shops</div>
+	<div class="maincat">Agriculture</div>
+    <div class="listing">
+      <div class="subcat">Consultants</div>
+      <div class="loc">South Coast, KZN<br></div>
+      <div class="company-block"><span class="company">Maclogika Consulting</span><span class="slogan">50yrs Experience</span></div>
+      <div class="contact-block">
+	  <div class="contact-pair"><div class="instr" style="color:#3498db;">Nigel</div><div class="numbers">081 250 5652</div></div>
+		<div class="contact-pair"><div class="instr" style="color:#3498db;"></div><div class="numbers"></div><div class="instr" style="color:#2ecc71;"></div><div class="numbers"></div></div>
+     </div>
+	 </div>
+				
+	<div class="maincat">Antique shops</div>
     <div class="listing">
       <div class="subcat"></div>
       <div class="loc">South Coast, KZN<br></div>
@@ -1152,9 +1162,9 @@
 
     <!-- Page 1 Ads -->
     <div class="ad page-ad" data-page="1">
-        <img src="https://i.ibb.co/9HKcDyhB/image-1.jpg" alt="Mother & Child Baking" style="width:100%; height:100%; object-fit:cover;">
+        <img src="https://i.ibb.co/QjC8RmWm/image-11.jpg" alt="image(11)" style="width:100%; height:100%; object-fit:cover;">
     </div>
-    <div class="ad" id="grok-ad">
+    <div class="ad" id="grok-ad" data-page="1">
        	<img src="https://i.ibb.co/5g4Bqjk5/image-13-Copy.jpg" alt="Powered by Grok xAI" style="width:100%; height:100%; object-fit:cover;">
     </div>
     <div class="ad page-ad" data-page="1">
@@ -1257,7 +1267,7 @@
     </div>
 </div>
         </div>
-    </div>
+    
 
 <script>
     let currentPage = 0;
