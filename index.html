@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=1260">
     <title>South Coast KZN Quick Reference</title>
 <style>
     * { box-sizing: border-box; }
@@ -153,11 +153,12 @@
         .modal-content { background:white; padding:25px; border-radius:8px; width:420px; max-height:90vh; overflow:auto; }
     
 		/* ===== SIMPLE MOBILE IMPROVEMENT ===== */
-@media screen and (max-width: 1260px) {
-    html, body {
-        overflow-x: hidden;
-        -webkit-text-size-adjust: 100%;
-    }
+	html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    -webkit-text-size-adjust: 100%;
+	}
 	
       .page-wrapper {
         width: 1260px !important;
@@ -171,7 +172,6 @@
     body {
         min-width: 320px;
     }
-}
 
 </style>
 </head>
@@ -1262,7 +1262,6 @@
 </div>
         </div>
     
-
 <script>
     let currentPage = 0;
     let pages = [];
