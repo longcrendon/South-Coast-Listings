@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>South Coast KZN Quick Reference</title>
 <style>
     * { box-sizing: border-box; }
@@ -152,19 +153,18 @@
         .modal-content { background:white; padding:25px; border-radius:8px; width:420px; max-height:90vh; overflow:auto; }
     
 		/* ===== SIMPLE MOBILE IMPROVEMENT ===== */
-	@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1260px) {
     html, body {
-        overflow-x: auto;          /* allows gentle horizontal scroll if needed */
+        overflow-x: hidden;
         -webkit-text-size-adjust: 100%;
     }
-
-    .page-wrapper {
-        width: 1260px;
-        height: 1580px;
-        margin: 0 auto;
-		position: relative;
-		background: white;
-		overflow: hidden;
+	
+      .page-wrapper {
+        width: 1260px !important;
+        min-width: 1260px;
+        margin: 0;
+        transform: scale(calc(100vw / 1260));
+        transform-origin: top left;
     }
 
     /* Prevent the page from becoming tiny */
@@ -173,12 +173,6 @@
     }
 }
 
-/* Optional – makes the page feel a bit larger on phones */
-@media screen and (max-width: 900px) {
-    .page-wrapper {
-        transform: scale(0.85);
-        transform-origin: top center;
-    }
 </style>
 </head>
 <body>
