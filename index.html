@@ -11,7 +11,7 @@
 
     /* ==================== HEADER (your latest) ==================== */
     .header { 
-        height: 150px; 
+        height: 155px; 
         position:relative; 
         background:white; 
         width:972px; 
@@ -25,7 +25,26 @@
     .pagebox { position:absolute; left:1px; top:94px; width:51px; height:43px; border:5px solid #d00000; text-align:center; padding-top:7px; font:9px "Trebuchet MS",Helvetica; line-height:1.4; color:#d00; cursor:pointer; }
     .topbanner { position:absolute; left:97px; top:17px; width:700px; height:61px; background:linear-gradient(to right, #006400, #004d00); color:white; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:13px; border:2px solid #ffd700; }
     .brand { position:absolute; left:64px; top:82px; width:732px; height:45px; border:2px solid #006400; background:white; text-align:center; line-height:50px; font-size:18px; z-index:2; }
-    .motivational { position:absolute; left:0; top:157px; width:972px; height:17px; background:white; text-align:center; line-height:15px; font-style:italic; font-size:11px; color:#006400; }
+    .motivational {
+    position: absolute;
+    left: 90px;
+    top: 138px;
+    width: 780px;
+    height: 14px;
+	margin: 0;
+	padding: 0;
+    text-align: center;
+    font: italic 11px Helvetica, Arial, sans-serif;
+    color: #006400;
+    line-height: 14px;
+    z-index: 45;
+    overflow: hidden;
+	}
+
+	#motivationalText {
+    display: block;
+    white-space: nowrap;
+	}
 
     .lfs { position:absolute; left:823px; top:23px; width:150px; height:118px; z-index:30; }
     .btns { position:absolute; right:6px; top:1px; display:flex; gap:8px; z-index:40; }
@@ -53,11 +72,11 @@
     .license { position:absolute; font:7.5px Helvetica,Arial,sans-serif; text-align:right; line-height:8px; top:108px; right:3px; width:160px; height:32px; overflow:hidden; color:#444; z-index:35; }
 
     /* ==================== FRAMES & LISTINGS (your latest) ==================== */
-    .green-frame { position:absolute; left:156px; top:188px; width:790px; height:1055px; border:5px solid #006400; background:white; z-index:1; }
-    .black-frame { position:absolute; left:161px; top:193px; width:780px; height:1045px; border:4px solid #000; z-index:2; }
+    .green-frame { position:absolute; left:140px; top:163px; width:790px; height:1055px; border:5px solid #006400; background:white; z-index:1; }
+    .black-frame { position:absolute; left:145px; top:168px; width:780px; height:1045px; border:4px solid #000; z-index:2; }
 
     .listings-area { 
-        position:absolute; left:174px; top:198px; width:755px; height:960px; 
+        position:absolute; left:154px; top:198px; width:755px; height:960px; 
         padding:6px 12px 75px 12px; background:white; z-index:10; overflow:hidden; 
     }
 
@@ -117,8 +136,8 @@
 		/* Bottom Banner */
 	.bottom-banner {
     position: absolute;
-    top: 1170px;
-    left: 175px;
+    top: 1150px;
+    left: 160px;
     width: 755px;
     height: 28px;
     background: #006400;
@@ -132,8 +151,8 @@
 }
 	.footer-copyright {
     position: absolute;
-    top: 1206px;
-    left: 175px;
+    top: 1183px;
+    left: 160px;
     width: 755px;
     height: 22px;
     background: #006400;
@@ -143,10 +162,8 @@
     text-align: center;
     z-index: 50;
 }
-
-
-    .adcol { position:absolute; right:144px; top:188px; width:162px; height:1180px; z-index:15; }
-    .ad { width:160px; height:340px; margin-bottom:12px; border:3px solid #006400; overflow:hidden; background:#f0f0f0; }
+    .adcol { position:absolute; right:134px; top:163px; width:162px; height:977px; z-index:15; }
+    .ad { width:160px; height:320px; margin-bottom:12px; border:3px solid #006400; overflow:hidden; background:#f0f0f0; }
 
         /* Modals */
         .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; align-items:center; justify-content:center; }
